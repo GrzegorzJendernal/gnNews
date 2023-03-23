@@ -7,19 +7,11 @@ export const Wrapper = styled.header`
 	flex-direction: row;
 	align-items: center;
 	height: 84px;
+	justify-content: space-between;
+	padding-left: 60px;
+	padding-right: 60px;
 `;
 
 export const Logo = styled.img`
 height: 50px;
-`;
-
-export const Button = styled.button`
-	width: 40px;
-	height: 40px;
-	padding: 0;
-`;
-
-export const Icon = styled.img`
-width: 35px;
-	height: 35px;
 `;
