@@ -1,6 +1,8 @@
 import { GlobalStyle } from "./GlobalStyle";
 import { Normalize } from "styled-normalize";
 import Header from "../../common/Header";
+import { Container } from "../../common/Container";
+import SideMenu from "../../common/SideMenu";
 
 const App = () => {
 	return (
@@ -8,7 +10,9 @@ const App = () => {
 		<Normalize/>
 		<GlobalStyle/>
 			<Header/>
-			Sialalala
+			<Container>
+				<SideMenu/>
+			</Container>
 		</>
 	)
 }
