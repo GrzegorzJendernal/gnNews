@@ -1,20 +1,21 @@
+import { countries } from "./countries";
+import { Flag, Item, List, Wrapper } from "./styled";
+
 const SideMenu = () => {
 	return (
-		<div>
-			<ul>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-				<li>country</li>
-			</ul>
-		</div>
+		<Wrapper>
+			<List>
+				{countries.map(({country, short}) => (
+					<Item key={country}>
+						<Flag
+							src={`https://flagcdn.com/${short}.svg`}
+							alt={`${country}`}
+					/>
+						{country}
+					</Item>
+				))}
+			</List>
+		</Wrapper>
 	);
 };
 
