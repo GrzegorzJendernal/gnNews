@@ -1,21 +1,30 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100%;
-  background-color: #000000;
-	display: flex;
+	margin-top: 10px;
+	border: black 1px solid;
 `;
 
 export const List = styled.ul`
 	list-style: none;
-	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
 `;
 
 export const Item = styled.li`
-	font-size: 22px;
-	padding: 8px;
+  height: 40px;
+  background-color: #000000;
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 8px 24px;
+  border: 1px solid #FFFFFF;
+  border-radius: 24px;
+  cursor: pointer;
 `;
 
 export const Flag = styled.img`
-	width: 30px;
+	width: 20px;
 `;
