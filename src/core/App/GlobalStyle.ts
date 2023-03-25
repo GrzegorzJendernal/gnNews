@@ -13,6 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     margin: 0;
     background-color: #FEFEFE;
-    font-family: 'Newsreader', serif;
+    font-family: 'Lato', sans-serif;
   }
 `;
