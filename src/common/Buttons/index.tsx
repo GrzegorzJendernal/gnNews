@@ -1,11 +1,16 @@
 import { Button, Container } from "./styled";
+import { useDispatch, useSelector } from "react-redux";
+import { changeView, selectView } from "../../core/App/newsSlice";
 
 const Buttons = () => {
-
+	const dispatch = useDispatch();
+	const viewList = useSelector(selectView);
 	return (
 		<Container>
-			<Button>
-				change view to list
+			<Button
+			onClick={() => dispatch(changeView())}
+			>
+				change view to {viewList ? "tiles" : "list"}
 			</Button>
 			<Button>
 				show more info
