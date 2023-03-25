@@ -41,4 +41,11 @@ export const countries = [
 	{ country: "Singapore", short: "sg" },
 	{ country: "Slovakia", short: "sk" },
 	{ country: "Slovenia", short: "si" },
+	{country: "Thailand", short: "th"},
+	{country: "Turkey", short: "tr"},
+	{country: "Taiwan", short: "tw"},
+	{country: "Ukraine", short: "ua"},
+	{country: "United States", short: "us"},
+	{country: "Venezuela", short: "ve"},
+	{country: "South Africa", short: "za"}
 ];
