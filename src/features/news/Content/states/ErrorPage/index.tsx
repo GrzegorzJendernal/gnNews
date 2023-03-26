@@ -1,5 +1,5 @@
 import React from "react";
-import { ErrorBox, Link, Sign, Title } from "./styled";
+import { ErrorBox,  Sign, Title } from "./styled";
 
 const ErrorPage = () => (
   <ErrorBox>
