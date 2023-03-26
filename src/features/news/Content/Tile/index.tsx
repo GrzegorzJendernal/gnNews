@@ -1,17 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import { News } from "../types/news";
-import { getNews } from "../api/apiRequest";
+import { News } from "../../../../common/types/news";
+import { getNews } from "../../../../common/api/apiRequest";
 import { Box, ContentBox, Image, TileBox, Title } from "./styled";
 import { useState } from "react";
 import Popup from "./Popup";
 import { useSelector } from "react-redux";
-import { selectView } from "../../core/App/newsSlice";
+import { selectCountry, selectView } from "../../newsSlice";
+import { countries } from "../../../../common/data/countries";
+import { useCountrySelection } from "../../../../common/data/useCountrySelection";
 
 const Tile = () => {
-	const {data} = useQuery(["news"], getNews);
 	const [showPopup, setShowPopup] = useState<{ [key: string]: boolean }>({});
 	const listView = useSelector(selectView);
-	const country = "United States of America";
+	const country = useCountrySelection();
+	const short = useSelector(selectCountry);
+	const {data} = useQuery(["news", {country: country}], () => getNews(short));
+
+	console.log(country)
 
 	const formatDate = (dateString: string) => {
 		return new Intl.DateTimeFormat("en-US", {
@@ -37,7 +42,7 @@ const Tile = () => {
 
 	return (
 		<ContentBox>
-			<Title>Top NEWS for {country}</Title>
+			<Title>Top NEWS for {countries.find((c) => c.short === country)?.country}</Title>
 			<Box listView={listView}>
 			{data.articles.map((news: News) => (
 				<TileBox

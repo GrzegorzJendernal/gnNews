@@ -41,7 +41,6 @@ export const StyledNavLink = styled(NavLink)`
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
-  padding: 8px 24px;
   &.active {
     border: 1px solid cadetblue;
     border-radius: 24px;
