@@ -7,6 +7,7 @@ import Content from "../../features/news/Content";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
+import Footer from "../../common/Footer";
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
 						<Route path={`/country/:country`} element={<Content/>}/>
 					</Routes>
 				</Container>
+				<Footer/>
 			</HashRouter>
 		</Provider>
 	)
