@@ -1,10 +1,7 @@
 import { countries } from "../data/countries";
 import { Country, Flag, Item, List, StyledNavLink, Wrapper } from "./styled";
-import { useDispatch } from "react-redux";
-import { setCountry } from "../../features/news/newsSlice";
 
 const SideMenu = () => {
-const dispatch = useDispatch();
 	return (
 		<Wrapper>
 			<List>
@@ -12,7 +9,6 @@ const dispatch = useDispatch();
 					<StyledNavLink
 						to={`/country/${url}`}
 						key={country}
-						onClick={() => dispatch(setCountry(short))}
 					>
 						<Item>
 							<Flag
