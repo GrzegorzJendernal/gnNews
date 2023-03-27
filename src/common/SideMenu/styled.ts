@@ -7,19 +7,38 @@ export const Wrapper = styled.nav`
 	margin: 0;
 `;
 
-export const List = styled.ul`
-	list-style: none;
-	padding: 0;
-	margin-top: 0;
+export const Title = styled.h2`
+	color: white;
+	font-size: 22px;
+	text-align: center;
 `;
 
-export const Item = styled.li`
+export const List = styled.ul`
+	margin-top: 0;
+	padding: 8px;
+`;
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
   display: grid;
   grid-template-columns: 20px auto;
   grid-gap: 10px;
   color: white;
-  padding: 8px 16px;
+  padding: 8px;
   cursor: pointer;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: #666666;
+  }
+
+  &.active {
+    border: 1px solid white;
+  }
+`;
+
+export const Item = styled.li`
+  list-style: none;
 `;
 
 export const Flag = styled.img`
@@ -33,16 +52,4 @@ export const Country = styled.span`
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-`;
-
-export const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
-  color: cadetblue;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 700;
-  &.active {
-    border: 1px solid cadetblue;
-    border-radius: 24px;
-  }
 `;

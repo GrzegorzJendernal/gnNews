@@ -1,16 +1,19 @@
 import { countries } from "../data/countries";
-import { Country, Flag, Item, List, StyledNavLink, Wrapper } from "./styled";
+import { Country, Flag, Item, List, StyledNavLink, Title, Wrapper } from "./styled";
 
 const SideMenu = () => {
 	return (
 		<Wrapper>
+			<Title>
+				Select country:
+			</Title>
 			<List>
 				{countries.map(({country, short, url}) => (
+					<Item
+						key={short}>
 					<StyledNavLink
 						to={`/country/${url}`}
-						key={country}
 					>
-						<Item>
 							<Flag
 								src={`https://flagcdn.com/${short}.svg`}
 								alt={`${country}`}
@@ -18,8 +21,8 @@ const SideMenu = () => {
 							<Country>
 								{country}
 							</Country>
-						</Item>
 					</StyledNavLink>
+					</Item>
 				))}
 			</List>
 		</Wrapper>
