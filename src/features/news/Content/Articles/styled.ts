@@ -18,7 +18,7 @@ export const Box = styled.div<TileBoxProps>`
 	`}
 `;
 
-export const TileBox = styled.div<TileBoxProps>`
+export const Article = styled.div<TileBoxProps>`
   background-color: #cccccc;
 	padding: 8px;
 	border-radius: 12px;

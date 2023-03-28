@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { News } from "../../../../common/types/news";
 import { getNews } from "../../../../common/api/apiRequest";
-import { Box, ContentBox, Image, TileBox, Title } from "./styled";
+import { Box, ContentBox, Image, Article, Title } from "./styled";
 import { useState } from "react";
-import Popup from "./Popup";
+import Popup from "../../../../common/Popup";
 import { useSelector } from "react-redux";
 import { selectView } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/data/useSelctedCountry";
 
-const Tile = () => {
+const Articles = () => {
 	const [showPopup, setShowPopup] = useState<{ [key: string]: boolean }>({});
 	const listView = useSelector(selectView);
 	const {country, short} = useSelectedCountry();
@@ -29,29 +29,22 @@ const Tile = () => {
 		}));
 	};
 
-	const handleClosePopup = (title: string) => {
-		setShowPopup((prevState) => ({
-			...prevState,
-			[title]: false,
-		}));
-	};
-
 	return (
 		<ContentBox>
 			<Title>Top NEWS for {country}</Title>
 			<Box listView={listView}>
 			{data.articles.map((news: News) => (
-				<TileBox
+				<Article
 					key={news.title}
 					onClick={() => handleTileClick(news.title)}
 					listView={listView}
 				>
 					<h2>{news.title}</h2>
 					{!listView && (
-						<><Image
+						<>{news.urlToImage && (<Image
 							src={news.urlToImage}
 							alt={"image"}
-							/>
+							/>)}
 						<p>{news.description}</p>
 							</>
 					)}
@@ -59,17 +52,17 @@ const Tile = () => {
 					<p>Date of publications: {formatDate(news.publishedAt)}</p>
 					{showPopup[news.title] && (
 						<Popup
+							title={news.title}
 							author={news.author}
 							content={news.content}
 							url={news.url}
-							onClose={() => handleClosePopup(news.title)}
 						/>
 					)}
-				</TileBox>
+				</Article>
 			))}
 		</Box>
 		</ContentBox>
 	);
 };
 
-export default Tile;
+export default Articles;
