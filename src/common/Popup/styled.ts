@@ -14,6 +14,7 @@ export const PopupWrapper = styled.div`
 
 export const PopupContent = styled.div`
   background-color: white;
+	max-width: 60vw;
   padding: 20px;
   border-radius: 5px;
 `;
