@@ -2,14 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { News } from "../../../../common/types/news";
 import { getNews } from "../../../../common/api/apiRequest";
 import { Box, ContentBox, Image, Article, Title } from "./styled";
-import { useState } from "react";
 import Popup from "../../../../common/Popup";
-import { useSelector } from "react-redux";
-import { selectView } from "../../newsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectPopup, selectView, showPopup } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/data/useSelctedCountry";
 
 const Articles = () => {
-	const [showPopup, setShowPopup] = useState<{ [key: string]: boolean }>({});
+	const dispatch = useDispatch();
+	const popup = useSelector(selectPopup);
 	const listView = useSelector(selectView);
 	const {country, short} = useSelectedCountry();
 	const {data} = useQuery(["news", {country: short}], () => getNews(short));
@@ -23,10 +23,7 @@ const Articles = () => {
 	};
 
 	const handleTileClick = (title: string) => {
-		setShowPopup((prevState) => ({
-			...prevState,
-			[title]: !prevState[title],
-		}));
+		dispatch(showPopup(title));
 	};
 
 	return (
@@ -50,7 +47,7 @@ const Articles = () => {
 					)}
 					<p>Source: {news.source.name}</p>
 					<p>Date of publications: {formatDate(news.publishedAt)}</p>
-					{showPopup[news.title] && (
+					{popup[news.title] && (
 						<Popup
 							title={news.title}
 							author={news.author}

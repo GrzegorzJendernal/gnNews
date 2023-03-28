@@ -17,12 +17,12 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 					<h3>{title}</h3>
 					<p>{content}</p>
 					<p>By: {author}</p>
-					<LinkButton
+					{!!url && (<LinkButton
 						as={"a"}
 						href={url}
 					>
 						Go to the article
-					</LinkButton>
+					</LinkButton>)}
 				</div>
 			</PopupContent>
 		</PopupWrapper>
