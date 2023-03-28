@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getNews } from "../../../common/api/apiRequest";
 import Loader from "./states/Loader";
 import { ErrorBox } from "./states/ErrorPage/styled";
-import Tile from "./Tile";
+import Articles from "./Articles";
 import { useSelectedCountry } from "../../../common/data/useSelctedCountry";
 
 const Content = () => {
@@ -12,7 +12,7 @@ const Content = () => {
 	if (isLoading) return (<Loader/>);
 	if (isError) return (<ErrorBox/>);
 
-	return <Tile/>
+	return <Articles/>
 };
 
 export default Content;
