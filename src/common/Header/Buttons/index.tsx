@@ -1,6 +1,7 @@
-import { Button, Container } from "./styled";
+import { Container } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { changeView, selectView } from "../../../features/news/newsSlice";
+import { Button } from "../../Button";
 
 const Buttons = () => {
 	const dispatch = useDispatch();
