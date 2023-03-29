@@ -18,3 +18,16 @@ export const PopupContent = styled.div`
   padding: 20px;
   border-radius: 5px;
 `;
+
+export const ButtonBox = styled.span`
+  display: flex;
+	justify-content: space-between;
+`;
+
+export const Button = styled.button`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+`;
