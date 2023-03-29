@@ -39,6 +39,7 @@ export const countries = [
 	{ country: "Saudi Arabia", short: "sa", url: "saudi-arabia" },
 	{ country: "Serbia", short: "rs", url: "serbia" },
 	{ country: "Singapore", short: "sg", url: "singapore" },
+	{ country: "South Africa", short: "za", url: "south-africa" },
 	{ country: "Slovakia", short: "sk", url: "slovakia" },
 	{ country: "Slovenia", short: "si", url: "slovenia" },
 	{ country: "Thailand", short: "th", url: "thailand" },
@@ -47,5 +48,4 @@ export const countries = [
 	{ country: "Ukraine", short: "ua", url: "ukraine" },
 	{ country: "United States", short: "us", url: "united-states" },
 	{ country: "Venezuela", short: "ve", url: "venezuela" },
-	{ country: "South Africa", short: "za", url: "south-africa" }
 ];

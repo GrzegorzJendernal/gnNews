@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledClock } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
-import { formatDate, formatTime } from "../../data/formatDate";
+import { formatDate, formatTime } from "../../funtions/formatDate";
 
 const Clock = () => {
 	const {myDate} = useCurrentDate();
