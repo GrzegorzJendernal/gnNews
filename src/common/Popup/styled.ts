@@ -19,7 +19,7 @@ export const PopupContent = styled.div`
   border-radius: 5px;
 `;
 
-export const ButtonBox = styled.span`
+export const Header = styled.span`
   display: flex;
 	justify-content: space-between;
 `;
