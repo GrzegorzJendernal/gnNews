@@ -21,9 +21,6 @@ export const Title = styled.h3`
   margin: 0 0 32px;
 `;
 
-export const Link = styled.a`
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  margin: 32px auto 0;
+export const Text = styled.span`
+text-align: center;
 `;

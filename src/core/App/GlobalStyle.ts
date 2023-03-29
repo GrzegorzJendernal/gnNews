@@ -14,5 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: #FEFEFE;
     font-family: 'Lato', sans-serif;
+    word-break: break-word;
   }
 `;

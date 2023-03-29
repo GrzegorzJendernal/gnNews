@@ -16,7 +16,7 @@ export const Spinner = styled.img.attrs({
 	src: spinner,
 	alt: "Loading...",
 })`
-  width: 160px;
+  width: 80px;
   height: auto;
   margin-top: 48px;
   animation: ${rotation} 1.5s linear infinite;

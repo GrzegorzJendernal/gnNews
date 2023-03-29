@@ -3,7 +3,7 @@ import { Spinner, SpinnerBox } from "./styled";
 
 const Loader = () => (
   <SpinnerBox>
-    <span>Please wait, news are being loaded...</span>
+    <div>Please wait, news are being loaded...</div>
     <Spinner />
   </SpinnerBox>
 );

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.nav`
 	width: 180px;
+	min-height: 100vh;
   background-color: #4d4d4d;
 	margin: 0;
 `;
