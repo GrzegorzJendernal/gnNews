@@ -24,12 +24,15 @@ const newsSlice = createSlice({
 		},
 		showPopup: (state, action: PayloadAction<string>) => {
 			const title = action.payload;
-			state.popup[title] = !state.popup[title];
+			state.popup[title] = true;
+		},
+		closePopup: (state) => {
+			state.popup = {};
 		},
 	}
 });
 
-export const {changeView, showPopup} = newsSlice.actions;
+export const {changeView, showPopup, closePopup} = newsSlice.actions;
 
 const selectNewsState = (state: RootState) => state.news;
 
