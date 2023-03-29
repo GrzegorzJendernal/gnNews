@@ -1,12 +1,23 @@
 import { countries } from "../data/countries";
-import { Country, Flag, Item, List, StyledNavLink, Title, Wrapper } from "./styled";
+import { Button, Country, Flag, Item, List, StyledNavLink, Title, Wrapper } from "./styled";
+import { useState } from "react";
 
 const SideMenu = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
 		<Wrapper>
+			<Button
+			onClick={toggleMenu}>
 			<Title>
 				Select country:
 			</Title>
+			</Button>
+			{isMenuOpen && (
 			<List>
 				{countries.map(({country, short, url}) => (
 					<Item
@@ -25,6 +36,7 @@ const SideMenu = () => {
 					</Item>
 				))}
 			</List>
+				)}
 		</Wrapper>
 	);
 };

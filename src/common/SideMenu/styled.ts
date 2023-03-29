@@ -2,14 +2,28 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.nav`
-	max-width: 180px;
+	width: 180px;
   background-color: #4d4d4d;
 	margin: 0;
 `;
 
+export const Button = styled.button`
+	margin: 8px;
+  border: 1px solid white;
+  background-color: #4d4d4d;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: #666666;
+  }
+`;
+
 export const Title = styled.h2`
 	color: white;
-	font-size: 22px;
+	font-size: 18px;
+	margin: 10px;
 	text-align: center;
 `;
 
