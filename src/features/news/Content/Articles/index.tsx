@@ -6,6 +6,7 @@ import Popup from "../../../../common/Popup";
 import { useDispatch, useSelector } from "react-redux";
 import { selectPopup, selectView, showPopup } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/data/useSelctedCountry";
+import React from "react";
 
 const Articles = () => {
 	const dispatch = useDispatch();
@@ -22,8 +23,9 @@ const Articles = () => {
 		}).format(new Date(dateString));
 	};
 
-	const handleTileClick = (title: string) => {
-		dispatch(showPopup(title));
+	const openPopup = (title: string) => {
+			if (popup[title]) return;
+			return dispatch(showPopup(title));
 	};
 
 	return (
@@ -33,7 +35,7 @@ const Articles = () => {
 			{data.articles.map((news: News) => (
 				<Article
 					key={news.title}
-					onClick={() => handleTileClick(news.title)}
+					onClick={() => openPopup(news.title)}
 					listView={listView}
 				>
 					<h2>{news.title}</h2>
