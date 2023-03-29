@@ -10,4 +10,4 @@ export type News = {
 	urlToImage: string;
 	publishedAt: Date;
 	content: string;
-}
+};

@@ -4,8 +4,6 @@ import  Danger from "./danger.svg";
 export const ErrorBox = styled.div`
   text-align: center;
   margin-top: 95px;
-  color: ${({ theme }) => theme.colors.errorPage};
-  transition: ${({ theme }) => theme.transition.time};
 `;
 
 export const Sign = styled.img.attrs({
