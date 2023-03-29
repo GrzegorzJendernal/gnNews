@@ -23,7 +23,7 @@ const App = () => {
 					<SideMenu/>
 					<Routes>
 						<Route path={`/country/:country`} element={<Content/>}/>
-						<Route path={"*"} element={<Navigate replace to="/country/poland" />} />
+						<Route path={"*"} element={<Navigate replace to={"/country/poland"} />} />
 					</Routes>
 				</Container>
 				<Footer/>
