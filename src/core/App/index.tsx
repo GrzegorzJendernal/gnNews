@@ -8,6 +8,8 @@ import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import Footer from "../../common/Footer";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 
 const App = () => {
 
@@ -15,6 +17,9 @@ const App = () => {
 		<Provider
 		store={store}
 		>
+			<ThemeProvider
+				theme={theme}
+			>
 			<Normalize/>
 			<GlobalStyle/>
 			<HashRouter>
@@ -28,8 +33,9 @@ const App = () => {
 				</Container>
 				<Footer/>
 			</HashRouter>
+			</ThemeProvider>
 		</Provider>
-	)
-}
+	);
+};
 
 export default App

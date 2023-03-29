@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getNews } from "../../../common/api/apiRequest";
 import Loader from "./states/Loader";
 import Articles from "./Articles";
-import { useSelectedCountry } from "../../../common/data/useSelctedCountry";
+import { useSelectedCountry } from "../../../common/funtions/useSelctedCountry";
 import ErrorPage from "./states/ErrorPage";
 
 const Content = () => {
