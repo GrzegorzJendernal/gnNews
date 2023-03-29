@@ -1,6 +1,8 @@
 import React from "react";
-import { PopupContent, PopupWrapper } from "./styled";
-import { LinkButton }  from "../Button";
+import { Button, ButtonBox, PopupContent, PopupWrapper } from "./styled";
+import { LinkButton } from "../Button";
+import { useDispatch,  } from "react-redux";
+import { closePopup } from "../../features/news/newsSlice";
 
 interface PopupProps {
 	title: string
@@ -10,11 +12,18 @@ interface PopupProps {
 }
 
 const Popup = ({ title, author, content, url }: PopupProps) => {
+	const dispatch = useDispatch();
 	return (
 		<PopupWrapper>
 			<PopupContent>
-				<div>
+				<ButtonBox>
 					<h3>{title}</h3>
+					<Button
+						onClick={() => dispatch(closePopup())}
+					>
+						x
+					</Button>
+				</ButtonBox>
 					<p>{content}</p>
 					<p>By: {author}</p>
 					{!!url && (<LinkButton
@@ -23,7 +32,6 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 					>
 						Go to the article
 					</LinkButton>)}
-				</div>
 			</PopupContent>
 		</PopupWrapper>
 	);
