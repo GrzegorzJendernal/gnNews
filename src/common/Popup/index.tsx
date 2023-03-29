@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonBox, PopupContent, PopupWrapper } from "./styled";
+import { Button, Header, PopupContent, PopupWrapper } from "./styled";
 import { LinkButton } from "../Button";
 import { useDispatch,  } from "react-redux";
 import { closePopup } from "../../features/news/newsSlice";
@@ -16,14 +16,14 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 	return (
 		<PopupWrapper>
 			<PopupContent>
-				<ButtonBox>
+				<Header>
 					<h3>{title}</h3>
 					<Button
 						onClick={() => dispatch(closePopup())}
 					>
 						x
 					</Button>
-				</ButtonBox>
+				</Header>
 					<p>{content}</p>
 					<p>By: {author}</p>
 					{!!url && (<LinkButton
