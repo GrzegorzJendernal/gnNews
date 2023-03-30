@@ -1,7 +1,6 @@
 {
   "name": "gnnews",
   "private": true,
-  "homepage": "https://grzegorzjendernal.github.io/gnNews/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
