@@ -17,14 +17,14 @@ const Buttons = () => {
 				change view to {viewList ? "tiles" : "list"}
 			</Button>
 			<Button
-			onClick={() => dispatch(showPopup("opis"))}>
+			onClick={() => dispatch(showPopup("description"))}>
 				show more info
 			</Button>
-			{popup["opis"] && (
+			{popup["description"] && (
 				<Popup
-					title={"tytuł"}
+					title={"Difficulties and fun"}
 					author={"Grzegorz Jendernal"}
-					content={"Opis tego co ma być opisane"}
+					content={"When creating this project, the difficulty was coming up with the design. I prefer to work on projects developed by professional graphic designers, which is why I focus on raw minimalism. I was also disappointed with the API as it doesn't allow sharing apps on gh sites and I haven't had time to look for a better replacement. And when it comes to fun, the whole project gave me a lot of satisfaction, I'm glad that I could try my hand under the pressure of time."}
 				/>)}
 		</Container>
 	);
