@@ -66,6 +66,14 @@ export const Image = styled.img`
 	width: 22vw;
 	display: block;
 	margin: 0 auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    width: 25vw;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    width: 40vw;
+  }
 `;
 
 export const Title = styled.h2`
