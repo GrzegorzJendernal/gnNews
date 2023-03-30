@@ -22,6 +22,7 @@ export const PopupContent = styled.div`
 export const Header = styled.span`
   display: flex;
 	justify-content: space-between;
+	gap: 10px;
 `;
 
 export const Button = styled.button`
