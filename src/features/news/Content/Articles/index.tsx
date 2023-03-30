@@ -5,7 +5,7 @@ import { News } from "../../../../common/types/news";
 import { getNews } from "../../../../common/api/apiRequest";
 import { Box, ContentBox, Image, Article, Header, Title, Paragraph } from "./styled";
 import Popup from "../../../../common/Popup";
-import { selectPopup, selectView, showPopup } from "../../newsSlice";
+import { selectLanguage, selectPopup, selectView, showPopup } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/functions/useSelctedCountry";
 import { formatDate } from "../../../../common/functions/formatDate";
 
@@ -13,8 +13,10 @@ const Articles = () => {
 	const dispatch = useDispatch();
 	const popup = useSelector(selectPopup);
 	const listView = useSelector(selectView);
+	const english = useSelector(selectLanguage);
 	const {country, short} = useSelectedCountry();
 	const {data} = useQuery(["news", {country: short}], () => getNews(short));
+	const locales = english ? "en-US" : "pl-PL";
 
 	const openPopup = (title: string) => {
 			if (popup[title]) return;
@@ -47,10 +49,12 @@ const Articles = () => {
 							</>
 					)}
 					<Paragraph>
-						Source: {news.source.name}
+						{english ? "Source:" : "Źródło:"}
+						 {news.source.name}
 					</Paragraph>
 					<Paragraph>
-						Published: {formatDate(news.publishedAt)}
+						{english ? "Published:" : "Opublikowano:"}
+						 {formatDate(news.publishedAt, locales)}
 					</Paragraph>
 					{popup[news.title] && (
 						<Popup

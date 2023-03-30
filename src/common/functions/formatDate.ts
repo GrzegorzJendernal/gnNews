@@ -1,5 +1,5 @@
-export const formatDate = (dateString: Date) => {
-	return new Intl.DateTimeFormat("en-US", {
+export const formatDate = (dateString: Date, locales: string) => {
+	return new Intl.DateTimeFormat(locales, {
 		day: "numeric",
 		weekday: "long",
 		month: "long",
@@ -7,8 +7,8 @@ export const formatDate = (dateString: Date) => {
 	}).format(new Date(dateString));
 };
 
-export const formatTime = (dateString: Date) => {
-	return new Intl.DateTimeFormat("en-US", {
+export const formatTime = (dateString: Date, locales: string) => {
+	return new Intl.DateTimeFormat(locales, {
 		hour: "numeric",
 		minute: "numeric",
 		second: "numeric",

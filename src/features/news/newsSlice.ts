@@ -8,11 +8,13 @@ interface PopupState {
 interface NewsState {
 	listView: boolean;
 	popup: PopupState;
+	english: boolean;
 }
 
 const initialState: NewsState = {
 	listView: true,
 	popup: {},
+	english: true,
 };
 
 const newsSlice = createSlice({
@@ -29,14 +31,23 @@ const newsSlice = createSlice({
 		closePopup: (state) => {
 			state.popup = {};
 		},
+		changeLanguage: state => {
+			state.english = !state.english;
+		},
 	}
 });
 
-export const {changeView, showPopup, closePopup} = newsSlice.actions;
+export const {
+	changeView,
+	showPopup,
+	closePopup,
+	changeLanguage,
+} = newsSlice.actions;
 
 const selectNewsState = (state: RootState) => state.news;
 
 export const selectView = (state: RootState) => selectNewsState(state).listView;
 export const selectPopup = (state: RootState) => selectNewsState(state).popup;
+export const selectLanguage = (state: RootState) => selectNewsState(state).english;
 
 export default newsSlice.reducer;

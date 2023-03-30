@@ -1,7 +1,7 @@
 import { Logo, Wrapper } from "./styled";
 import Buttons from "./Buttons";
 import { Link } from "react-router-dom";
-import gnNews from "../assets/gnNews.png";
+import gnNews from "../../../common/assets/gnNews.png";
 
 const Header = () => {
 	return (

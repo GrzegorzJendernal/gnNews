@@ -14,7 +14,7 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

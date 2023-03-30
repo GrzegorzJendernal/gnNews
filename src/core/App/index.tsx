@@ -1,13 +1,13 @@
 import { GlobalStyle } from "./GlobalStyle";
 import { Normalize } from "styled-normalize";
-import Header from "../../common/Header";
+import Header from "../../features/news/Header";
 import { Container } from "../../common/Container";
-import SideMenu from "../../common/SideMenu";
+import SideMenu from "../../features/news/SideMenu";
 import Content from "../../features/news/Content";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-import Footer from "../../common/Footer";
+import Footer from "../../features/news/Footer";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 

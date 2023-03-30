@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Header, Paragraph, PopupContent, PopupWrapper, Title } from "./styled";
 import { LinkButton } from "../Button";
-import { useDispatch,  } from "react-redux";
-import { closePopup } from "../../features/news/newsSlice";
+import { useDispatch, useSelector, } from "react-redux";
+import { closePopup, selectLanguage } from "../../features/news/newsSlice";
 
 interface PopupProps {
 	title: string
@@ -13,6 +13,7 @@ interface PopupProps {
 
 const Popup = ({ title, author, content, url }: PopupProps) => {
 	const dispatch = useDispatch();
+	const english = useSelector(selectLanguage);
 	return (
 		<PopupWrapper>
 			<PopupContent>
@@ -30,13 +31,14 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 						{content}
 					</Paragraph>
 					<Paragraph>
-						By: {author}
+						{english ? "By:" : "Przez:"}
+						{author}
 					</Paragraph>
 					{!!url && (<LinkButton
 						as={"a"}
 						href={url}
 					>
-						Go to the article
+						{english ? "Go to the article" : "Przjdź do artykułu"}
 					</LinkButton>)}
 			</PopupContent>
 		</PopupWrapper>

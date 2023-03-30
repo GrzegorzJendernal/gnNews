@@ -66,11 +66,6 @@ export const Item = styled.li`
   list-style: none;
 `;
 
-export const Flag = styled.img`
-	width: 20px;
-	align-self: center;
-`;
-
 export const Country = styled.span`
   display: flex;
   align-items: center;
