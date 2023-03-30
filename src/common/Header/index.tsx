@@ -1,13 +1,14 @@
 import { Logo, Wrapper } from "./styled";
 import Buttons from "./Buttons";
 import { Link } from "react-router-dom";
+import gnNews from "../assets/gnNews.png";
 
 const Header = () => {
 	return (
 		<Wrapper>
 			<Link to={"/country/poland"}>
 			<Logo
-				src={"/src/common/assets/gnNews.png"}
+				src={gnNews}
 				alt={"gnNews"}
 			/>
 			</Link>

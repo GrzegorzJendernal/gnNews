@@ -32,5 +32,10 @@ export const Wrapper = styled.header`
 `;
 
 export const Logo = styled.img`
-height: 50px;
+	height: 50px;
+  width: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 40px;
+  }
 `;
