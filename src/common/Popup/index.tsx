@@ -31,7 +31,7 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 						{content}
 					</Paragraph>
 					<Paragraph>
-						{english ? "By:" : "Przez:"}
+						{english ? "By: " : "Przez: "}
 						{author}
 					</Paragraph>
 					{!!url && (<LinkButton
