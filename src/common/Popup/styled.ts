@@ -35,7 +35,6 @@ export const Button = styled.button`
 export const Title = styled.h3`
 	margin: 0;
 	font-size: 18px;
-	line-height: 1.5;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 14px;

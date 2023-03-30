@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { News } from "../../../../common/types/news";
 import { getNews } from "../../../../common/api/apiRequest";
-import { Box, ContentBox, Image, Article, Title } from "./styled";
+import { Box, ContentBox, Image, Article, Header, Title, Paragraph } from "./styled";
 import Popup from "../../../../common/Popup";
 import { selectPopup, selectView, showPopup } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/functions/useSelctedCountry";
@@ -23,7 +23,7 @@ const Articles = () => {
 
 	return (
 		<ContentBox>
-			<Title>Top NEWS for {country}</Title>
+			<Header>Top NEWS for {country}</Header>
 			<Box listView={listView}>
 			{data.articles.map((news: News) => (
 				<Article
@@ -31,7 +31,9 @@ const Articles = () => {
 					onClick={() => openPopup(news.title)}
 					listView={listView}
 				>
-					<h2>{news.title}</h2>
+					<Title>
+						{news.title}
+					</Title>
 					{!listView && (
 						<>
 							{news.urlToImage && (
@@ -39,11 +41,17 @@ const Articles = () => {
 							src={news.urlToImage}
 							alt={"image"}
 							/>)}
-						<p>{news.description}</p>
+						<Paragraph>
+							{news.description}
+						</Paragraph>
 							</>
 					)}
-					<p>Source: {news.source.name}</p>
-					<p>Published: {formatDate(news.publishedAt)}</p>
+					<Paragraph>
+						Source: {news.source.name}
+					</Paragraph>
+					<Paragraph>
+						Published: {formatDate(news.publishedAt)}
+					</Paragraph>
 					{popup[news.title] && (
 						<Popup
 							title={news.title}
