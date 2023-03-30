@@ -6,8 +6,8 @@ import { getNews } from "../../../../common/api/apiRequest";
 import { Box, ContentBox, Image, Article, Title } from "./styled";
 import Popup from "../../../../common/Popup";
 import { selectPopup, selectView, showPopup } from "../../newsSlice";
-import { useSelectedCountry } from "../../../../common/funtions/useSelctedCountry";
-import { formatDate } from "../../../../common/funtions/formatDate";
+import { useSelectedCountry } from "../../../../common/functions/useSelctedCountry";
+import { formatDate } from "../../../../common/functions/formatDate";
 
 const Articles = () => {
 	const dispatch = useDispatch();

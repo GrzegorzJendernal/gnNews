@@ -1,4 +1,4 @@
-import { countries } from "../funtions/countries";
+import { countries } from "../functions/countries";
 import { Button, Country, Flag, Item, List, StyledNavLink, Title, Wrapper } from "./styled";
 import { useState } from "react";
 

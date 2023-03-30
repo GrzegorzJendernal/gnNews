@@ -1,7 +1,7 @@
 import Clock from "./Clock";
 import { Text, Wrapper } from "./styled";
 import { useQuery } from "@tanstack/react-query";
-import { useSelectedCountry } from "../funtions/useSelctedCountry";
+import { useSelectedCountry } from "../functions/useSelctedCountry";
 import { getNews } from "../api/apiRequest";
 
 const Footer = () => {

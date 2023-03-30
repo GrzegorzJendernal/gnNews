@@ -14,6 +14,21 @@ export const Wrapper = styled.header`
 	justify-content: space-between;
 	padding-left: 60px;
 	padding-right: 60px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+	
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
 export const Logo = styled.img`

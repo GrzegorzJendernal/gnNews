@@ -31,3 +31,21 @@ export const Button = styled.button`
 	width: 25px;
 	height: 25px;
 `;
+
+export const Title = styled.h3`
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.5;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 14px;
+  }
+`;
+
+export const Paragraph = styled.p`
+	font-size: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 12px;
+  }
+`;

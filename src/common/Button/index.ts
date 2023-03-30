@@ -42,4 +42,5 @@ export const LinkButton = styled(Button).attrs(() => ({
   text-decoration: none;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 `;
