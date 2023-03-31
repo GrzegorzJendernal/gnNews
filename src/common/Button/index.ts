@@ -13,16 +13,16 @@ export const Button = styled.button`
   cursor: pointer;
   text-transform: uppercase;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     font-size: 11px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 10px;
 	  padding: 4px 12px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.small}) {
     font-size: 8px;
     padding: 2px 6px;
   }

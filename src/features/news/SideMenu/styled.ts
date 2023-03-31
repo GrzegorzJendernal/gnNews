@@ -7,7 +7,7 @@ export const Wrapper = styled.nav`
   background-color: #4d4d4d;
 	margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
 	  width: unset;
     max-width: 180px;
   }
@@ -32,7 +32,7 @@ export const Title = styled.h2`
 	margin: 10px;
 	text-align: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 10px;
     margin: 5px;
   }
@@ -73,7 +73,7 @@ export const Country = styled.span`
   line-height: 20px;
   font-weight: 400;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 10px;
     line-height: 12px;
   }

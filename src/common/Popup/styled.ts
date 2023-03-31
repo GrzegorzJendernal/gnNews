@@ -14,39 +14,39 @@ export const PopupWrapper = styled.div`
 
 export const PopupContent = styled.div`
   background-color: white;
-	max-width: 60vw;
+  max-width: 60vw;
   padding: 20px;
   border-radius: 5px;
 `;
 
 export const Header = styled.span`
   display: flex;
-	justify-content: space-between;
-	gap: 10px;
+  justify-content: space-between;
+  gap: 10px;
 `;
 
 export const Button = styled.button`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 25px;
-	height: 25px;
-	padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
 `;
 
 export const Title = styled.h3`
-	margin: 0;
-	font-size: 18px;
+  margin: 0;
+  font-size: 18px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 14px;
   }
 `;
 
 export const Paragraph = styled.p`
-	font-size: 16px;
+  font-size: 16px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 12px;
   }
 `;

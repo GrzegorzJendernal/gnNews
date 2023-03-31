@@ -11,7 +11,7 @@ interface PopupProps {
 	url?: string;
 }
 
-const Popup = ({ title, author, content, url }: PopupProps) => {
+const Popup = ({title, author, content, url}: PopupProps) => {
 	const dispatch = useDispatch();
 	const english = useSelector(selectLanguage);
 	return (
@@ -27,19 +27,19 @@ const Popup = ({ title, author, content, url }: PopupProps) => {
 						x
 					</Button>
 				</Header>
-					<Paragraph>
-						{content}
-					</Paragraph>
-					<Paragraph>
-						{english ? "By: " : "Przez: "}
-						{author}
-					</Paragraph>
-					{!!url && (<LinkButton
-						as={"a"}
-						href={url}
-					>
-						{english ? "Go to the article" : "Przjdź do artykułu"}
-					</LinkButton>)}
+				<Paragraph>
+					{content}
+				</Paragraph>
+				<Paragraph>
+					{english ? "By: " : "Przez: "}
+					{author}
+				</Paragraph>
+				{!!url && (<LinkButton
+					as={"a"}
+					href={url}
+				>
+					{english ? "Go to the article" : "Przjdź do artykułu"}
+				</LinkButton>)}
 			</PopupContent>
 		</PopupWrapper>
 	);

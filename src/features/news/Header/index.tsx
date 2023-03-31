@@ -7,10 +7,10 @@ const Header = () => {
 	return (
 		<Wrapper>
 			<Link to={"/country/poland"}>
-			<Logo
-				src={gnNews}
-				alt={"gnNews"}
-			/>
+				<Logo
+					src={gnNews}
+					alt={"gnNews"}
+				/>
 			</Link>
 			<Buttons/>
 		</Wrapper>

@@ -16,31 +16,31 @@ const SideMenu = () => {
 	return (
 		<Wrapper>
 			<Button
-			onClick={toggleMenu}>
-			<Title>
-				{english ? "Select country" : "Wybierz kraj"}
-			</Title>
+				onClick={toggleMenu}>
+				<Title>
+					{english ? "Select country" : "Wybierz kraj"}
+				</Title>
 			</Button>
 			{isMenuOpen && (
-			<List>
-				{countries.map(({country, short, url, countryPl}) => (
-					<Item
-						key={short}>
-					<StyledNavLink
-						to={`/country/${url}`}
-					>
-							<Flag
-								src={`https://flagcdn.com/${short}.svg`}
-								alt={`${country}`}
-							/>
-							<Country>
-								{english ? `${country}` : `${countryPl}`}
-							</Country>
-					</StyledNavLink>
-					</Item>
-				))}
-			</List>
-				)}
+				<List>
+					{countries.map(({country, short, url, countryPl}) => (
+						<Item
+							key={short}>
+							<StyledNavLink
+								to={`/country/${url}`}
+							>
+								<Flag
+									src={`https://flagcdn.com/${short}.svg`}
+									alt={`${country}`}
+								/>
+								<Country>
+									{english ? `${country}` : `${countryPl}`}
+								</Country>
+							</StyledNavLink>
+						</Item>
+					))}
+				</List>
+			)}
 		</Wrapper>
 	);
 };

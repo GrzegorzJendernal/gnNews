@@ -8,6 +8,6 @@ export const useSelectedCountry = () => {
 		.find(
 			(countryURL) => countryURL.url === country
 		);
-	if (!selectedCountry) return { country: "Poland", short: "pl", url: "poland", countryPl: "Polska" };
+	if (!selectedCountry) return {country: "Poland", short: "pl", url: "poland", countryPl: "Polska"};
 	return selectedCountry;
 };

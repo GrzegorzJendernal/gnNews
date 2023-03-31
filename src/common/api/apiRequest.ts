@@ -3,9 +3,9 @@ import { apiKey } from "./apiKey";
 
 export const getNews = async (country: string) => {
 	const params = new URLSearchParams({
-		country: country,
-		apiKey: apiKey,
-		pageSize: "50",
+			country: country,
+			apiKey: apiKey,
+			pageSize: "50",
 		}
 	);
 

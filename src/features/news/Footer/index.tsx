@@ -12,7 +12,7 @@ const Footer = () => {
 	const english = useSelector(selectLanguage);
 	return (
 		<Wrapper>
-				{data && <Text>{english ? "Articles on site" : "Liczba artykułów"}: {data.totalResults}</Text>}
+			{data && <Text>{english ? "Articles on site" : "Liczba artykułów"}: {data.totalResults}</Text>}
 			<Clock/>
 		</Wrapper>
 	);

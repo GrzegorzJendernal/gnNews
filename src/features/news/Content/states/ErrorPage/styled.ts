@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import  Danger from "./danger.svg";
+import Danger from "./danger.svg";
 
 export const ErrorBox = styled.div`
   text-align: center;

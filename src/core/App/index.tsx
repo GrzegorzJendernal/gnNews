@@ -15,24 +15,24 @@ const App = () => {
 
 	return (
 		<Provider
-		store={store}
+			store={store}
 		>
 			<ThemeProvider
 				theme={theme}
 			>
-			<Normalize/>
-			<GlobalStyle/>
-			<HashRouter>
-				<Header/>
-				<Container>
-					<SideMenu/>
-					<Routes>
-						<Route path={`/country/:country`} element={<Content/>}/>
-						<Route path={"*"} element={<Navigate replace to={"/country/poland"} />} />
-					</Routes>
-				</Container>
-				<Footer/>
-			</HashRouter>
+				<Normalize/>
+				<GlobalStyle/>
+				<HashRouter>
+					<Header/>
+					<Container>
+						<SideMenu/>
+						<Routes>
+							<Route path={`/country/:country`} element={<Content/>}/>
+							<Route path={"*"} element={<Navigate replace to={"/country/poland"}/>}/>
+						</Routes>
+					</Container>
+					<Footer/>
+				</HashRouter>
 			</ThemeProvider>
 		</Provider>
 	);
