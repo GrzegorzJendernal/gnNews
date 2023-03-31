@@ -31,6 +31,7 @@ export const Button = styled.button`
 	align-items: center;
 	width: 25px;
 	height: 25px;
+	padding: 0;
 `;
 
 export const Title = styled.h3`
