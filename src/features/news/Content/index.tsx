@@ -8,7 +8,7 @@ import ErrorPage from "./states/ErrorPage";
 const Content = () => {
 	const {short} = useSelectedCountry();
 
-	const {isLoading, isError} = useQuery(["news", {country: short}], () => getNews(short));
+	const {isLoading, isError} = useQuery(["news", {country: short}], () => getNews());
 	if (isLoading) return (<Loader/>);
 	if (isError) return (<ErrorPage/>);
 
