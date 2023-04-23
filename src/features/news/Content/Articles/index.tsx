@@ -15,7 +15,7 @@ const Articles = () => {
 	const listView = useSelector(selectView);
 	const english = useSelector(selectLanguage);
 	const {country, short, countryPl} = useSelectedCountry();
-	const {data} = useQuery(["news", {country: short}], () => getNews(short));
+	const {data} = useQuery(["news", {country: short}], () => getNews());
 	const locales = english ? "en-US" : "pl-PL";
 
 	const openPopup = (title: string) => {
@@ -38,9 +38,9 @@ const Articles = () => {
 						</Title>
 						{!listView && (
 							<>
-								{news.urlToImage && (
+								{news.image && (
 									<Image
-										src={news.urlToImage}
+										src={news.image}
 										alt={"image"}
 									/>)}
 								<Paragraph>
@@ -59,7 +59,7 @@ const Articles = () => {
 						{popup[news.title] && (
 							<Popup
 								title={news.title}
-								author={news.author}
+								author={news.source.name}
 								content={news.content}
 								url={news.url}
 							/>
