@@ -3,8 +3,7 @@ import Buttons from "./Buttons";
 import { Link } from "react-router-dom";
 import gnNews from "../../../common/assets/gnNews.png";
 
-const Header = () => {
-	return (
+const Header = () => (
 		<Wrapper>
 			<Link to={"/country/poland"}>
 				<Logo
@@ -15,6 +14,5 @@ const Header = () => {
 			<Buttons/>
 		</Wrapper>
 	);
-};
 
 export default Header;

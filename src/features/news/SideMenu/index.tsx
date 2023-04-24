@@ -2,12 +2,9 @@ import { countries } from "../../../common/functions/countries";
 import { Button, Country, Item, List, StyledNavLink, Title, Wrapper } from "./styled";
 import { useState } from "react";
 import { Flag } from "../../../common/Flag";
-import { useSelector } from "react-redux";
-import { selectLanguage } from "../newsSlice";
 
 const SideMenu = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const english = useSelector(selectLanguage);
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -18,12 +15,12 @@ const SideMenu = () => {
 			<Button
 				onClick={toggleMenu}>
 				<Title>
-					{english ? "Select country" : "Wybierz kraj"}
+					Select country
 				</Title>
 			</Button>
 			{isMenuOpen && (
 				<List>
-					{countries.map(({country, short, url, countryPl}) => (
+					{countries.map(({country, short, url}) => (
 						<Item
 							key={short}>
 							<StyledNavLink
@@ -34,7 +31,7 @@ const SideMenu = () => {
 									alt={`${country}`}
 								/>
 								<Country>
-									{english ? `${country}` : `${countryPl}`}
+									{country}
 								</Country>
 							</StyledNavLink>
 						</Item>

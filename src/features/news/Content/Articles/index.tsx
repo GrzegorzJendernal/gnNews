@@ -5,7 +5,7 @@ import { News } from "../../../../common/types/news";
 import { getNews } from "../../../../common/api/apiRequest";
 import { Article, Box, ContentBox, Header, Image, Paragraph, Title } from "./styled";
 import Popup from "../../../../common/Popup";
-import { selectLanguage, selectPopup, selectView, showPopup } from "../../newsSlice";
+import { selectPopup, selectView, showPopup } from "../../newsSlice";
 import { useSelectedCountry } from "../../../../common/functions/useSelctedCountry";
 import { formatDate } from "../../../../common/functions/formatDate";
 
@@ -13,10 +13,9 @@ const Articles = () => {
 	const dispatch = useDispatch();
 	const popup = useSelector(selectPopup);
 	const listView = useSelector(selectView);
-	const english = useSelector(selectLanguage);
-	const {country, short, countryPl} = useSelectedCountry();
+	const {country, short, } = useSelectedCountry();
 	const {data} = useQuery(["news", {country: short}], () => getNews());
-	const locales = english ? "en-US" : "pl-PL";
+	const locales = "en-US";
 
 	const openPopup = (title: string) => {
 		if (popup[title]) return;
@@ -25,7 +24,9 @@ const Articles = () => {
 
 	return (
 		<ContentBox>
-			<Header>{english ? `Top NEWS for ${country}` : `${countryPl} - najważniejsze informacje`}</Header>
+			<Header>
+				Top NEWS for ${country}
+			</Header>
 			<Box listView={listView}>
 				{data.articles.map((news: News) => (
 					<Article
@@ -49,11 +50,11 @@ const Articles = () => {
 							</>
 						)}
 						<Paragraph>
-							{english ? "Source: " : "Źródło: "}
+							Source:
 							{news.source.name}
 						</Paragraph>
 						<Paragraph>
-							{english ? "Published: " : "Opublikowano: "}
+							Published:
 							{formatDate(news.publishedAt, locales)}
 						</Paragraph>
 						{popup[news.title] && (
