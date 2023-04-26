@@ -14,7 +14,7 @@ const Articles = () => {
 	const popup = useSelector(selectPopup);
 	const listView = useSelector(selectView);
 	const {country, short, } = useSelectedCountry();
-	const {data} = useQuery(["news", {country: short}], () => getNews());
+	const {data} = useQuery(["news", {country: short}], () => getNews(short));
 	const locales = "en-US";
 
 	const openPopup = (title: string) => {
@@ -25,7 +25,7 @@ const Articles = () => {
 	return (
 		<ContentBox>
 			<Header>
-				Top NEWS for ${country}
+				Top NEWS for {country}
 			</Header>
 			<Box listView={listView}>
 				{data.articles.map((news: News) => (

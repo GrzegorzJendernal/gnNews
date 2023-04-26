@@ -5,7 +5,7 @@ import gnNews from "../../../common/assets/gnNews.png";
 
 const Header = () => (
 		<Wrapper>
-			<Link to={"/country/poland"}>
+			<Link to={"/country/united-states"}>
 				<Logo
 					src={gnNews}
 					alt={"gnNews"}
