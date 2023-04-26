@@ -6,7 +6,7 @@ import { getNews } from "../../../common/api/apiRequest";
 
 const Footer = () => {
 	const {short} = useSelectedCountry();
-	const {data} = useQuery(["news", {country: short}], () => getNews());
+	const {data} = useQuery(["news", {country: short}], () => getNews(short));
 	return (
 		<Wrapper>
 			{data &&
