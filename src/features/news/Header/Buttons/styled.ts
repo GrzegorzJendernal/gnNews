@@ -5,7 +5,7 @@ export const Container = styled.span`
   gap: 50px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
-    gap: 30px
+    gap: 30px;
   }
 
   @media (max-width: ${({theme}) => theme.breakpoints.small}) {

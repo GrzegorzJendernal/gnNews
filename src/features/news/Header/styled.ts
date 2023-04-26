@@ -6,20 +6,20 @@ export const Wrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
-	background-color: #000000;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	height: 84px;
-	justify-content: space-between;
-	padding-left: 60px;
-	padding-right: 60px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 84px;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     padding-left: 50px;
     padding-right: 50px;
   }
-	
+
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     padding-left: 30px;
     padding-right: 30px;
@@ -32,7 +32,7 @@ export const Wrapper = styled.header`
 `;
 
 export const Logo = styled.img`
-	height: 50px;
+  height: 50px;
   width: auto;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {

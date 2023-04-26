@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, {keyframes} from "styled-components";
 import spinner from "./iconSpinner.svg";
 
 export const SpinnerBox = styled.div`
@@ -13,8 +13,8 @@ const rotation = keyframes`
 `;
 
 export const Spinner = styled.img.attrs({
-	src: spinner,
-	alt: "Loading...",
+  src: spinner,
+  alt: "Loading...",
 })`
   width: 80px;
   height: auto;

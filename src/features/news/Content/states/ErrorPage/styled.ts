@@ -7,8 +7,8 @@ export const ErrorBox = styled.div`
 `;
 
 export const Sign = styled.img.attrs({
-	src: Danger,
-	alt: "Sign",
+  src: Danger,
+  alt: "Sign",
 })`
   width: 37px;
   height: 33.34px;
@@ -22,5 +22,5 @@ export const Title = styled.h3`
 `;
 
 export const Text = styled.span`
-text-align: center;
+  text-align: center;
 `;

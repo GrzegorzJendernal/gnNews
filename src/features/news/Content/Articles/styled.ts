@@ -1,7 +1,7 @@
-import styled, { css, CSSProperties } from "styled-components";
+import styled, {css, CSSProperties} from "styled-components";
 
 export const ContentBox = styled.div`
-	padding: 15px;
+  padding: 15px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     padding: 5px;
@@ -9,14 +9,14 @@ export const ContentBox = styled.div`
 `;
 
 interface TileBoxProps {
-	listView: boolean;
-	style?: CSSProperties;
+  listView: boolean;
+  style?: CSSProperties;
 }
 
 export const Box = styled.div<TileBoxProps>`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 15px;
+  grid-gap: 15px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     grid-template-columns: 1fr 1fr;
@@ -26,29 +26,33 @@ export const Box = styled.div<TileBoxProps>`
     grid-template-columns: 1fr;
   }
 
-  ${({listView}) => listView && css`
-	display: block;
-	`}
+  ${({listView}) =>
+    listView &&
+    css`
+      display: block;
+    `}
 `;
 
 export const Article = styled.div<TileBoxProps>`
   background-color: #cccccc;
-	padding: 8px;
-	border-radius: 12px;
+  padding: 8px;
+  border-radius: 12px;
 
-  ${({listView}) => listView && css`
-    border-bottom: black 1px solid;
-	  border-radius: unset;
-	  background-color: white;
-  `}
+  ${({listView}) =>
+    listView &&
+    css`
+      border-bottom: black 1px solid;
+      border-radius: unset;
+      background-color: white;
+    `}
   &:hover {
     background-color: #e6e6e6;
   }
 `;
 
 export const Header = styled.h1`
-	margin: 8px;
-	font-size: 35px;
+  margin: 8px;
+  font-size: 35px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     font-size: 28px;
@@ -64,9 +68,9 @@ export const Header = styled.h1`
 `;
 
 export const Image = styled.img`
-	width: 22vw;
-	display: block;
-	margin: 0 auto;
+  width: 22vw;
+  display: block;
+  margin: 0 auto;
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     width: 25vw;
@@ -78,8 +82,8 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
-	font-size: 26px;
-	
+  font-size: 26px;
+
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     font-size: 20px;
   }
@@ -94,7 +98,7 @@ export const Title = styled.h2`
 `;
 
 export const Paragraph = styled.p`
-	font-size: 16px;
+  font-size: 16px;
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     font-size: 14px;

@@ -8,7 +8,7 @@ export const Button = styled.button`
   line-height: 150%;
   font-weight: 700;
   padding: 8px 24px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 24px;
   cursor: pointer;
   text-transform: uppercase;
@@ -19,7 +19,7 @@ export const Button = styled.button`
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 10px;
-	  padding: 4px 12px;
+    padding: 4px 12px;
   }
 
   @media (max-width: ${({theme}) => theme.breakpoints.small}) {
@@ -37,10 +37,10 @@ export const Button = styled.button`
 `;
 
 export const LinkButton = styled(Button).attrs(() => ({
-	as: "a"
+  as: "a",
 }))`
   text-decoration: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

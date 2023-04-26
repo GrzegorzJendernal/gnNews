@@ -1,15 +1,14 @@
 import axios from "axios";
-import { apiKey } from "./apiKey";
+import {apiKey} from "./apiKey";
 
 export const getNews = async (country: string) => {
-	const params = new URLSearchParams({
-			country: country,
-			apikey: apiKey,
-		}
-	);
+  const params = new URLSearchParams({
+    country: country,
+    apikey: apiKey,
+  });
 
-	const response = await axios.get(
-		`https://gnews.io/api/v4/top-headlines?category=general&${params}`
-	);
-	return await response.data;
+  const response = await axios.get(
+    `https://gnews.io/api/v4/top-headlines?category=general&${params}`
+  );
+  return await response.data;
 };

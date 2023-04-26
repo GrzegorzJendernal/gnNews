@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export const Wrapper = styled.nav`
-	width: 180px;
-	min-height: 100vh;
+  width: 180px;
+  min-height: 100vh;
   background-color: #4d4d4d;
-	margin: 0;
+  margin: 0;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
-	  width: unset;
+    width: unset;
     max-width: 180px;
   }
 `;
 
 export const Button = styled.button`
-	margin: 8px;
+  margin: 8px;
   border: 1px solid white;
   background-color: #4d4d4d;
   color: white;
@@ -27,10 +27,10 @@ export const Button = styled.button`
 `;
 
 export const Title = styled.h2`
-	color: white;
-	font-size: 18px;
-	margin: 10px;
-	text-align: center;
+  color: white;
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
     font-size: 10px;
@@ -39,8 +39,8 @@ export const Title = styled.h2`
 `;
 
 export const List = styled.ul`
-	margin-top: 0;
-	padding: 8px;
+  margin-top: 0;
+  padding: 8px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
