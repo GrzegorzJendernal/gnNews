@@ -1,9 +1,9 @@
 import axios from "axios";
 import { apiKey } from "./apiKey";
 
-export const getNews = async () => {
+export const getNews = async (country: string) => {
 	const params = new URLSearchParams({
-	// 		country: country,
+			country: country,
 			apikey: apiKey,
 		}
 	);
