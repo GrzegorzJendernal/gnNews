@@ -32,7 +32,10 @@ const Articles = () => {
 
   return (
     <ContentBox>
-      <Header>Top NEWS for {country}</Header>
+      <Header>
+        Top NEWS for
+        {country}
+      </Header>
       <Box listView={listView}>
         {data.articles.map((news: News) => (
           <Article

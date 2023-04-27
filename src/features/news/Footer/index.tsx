@@ -9,7 +9,12 @@ const Footer = () => {
   const {data} = useQuery(["news", {country: short}], () => getNews(short));
   return (
     <Wrapper>
-      {data && <Text>Articles on site: {data.totalResults}</Text>}
+      {data && (
+        <Text>
+          Articles on site:
+          {data.totalResults}
+        </Text>
+      )}
       <Clock />
     </Wrapper>
   );
