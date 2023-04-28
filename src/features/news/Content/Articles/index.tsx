@@ -32,10 +32,7 @@ const Articles = () => {
 
   return (
     <ContentBox>
-      <Header>
-        Top NEWS for
-        {country}
-      </Header>
+      <Header>Top NEWS for {country}</Header>
       <Box listView={listView}>
         {data.articles.map((news: News) => (
           <Article
@@ -55,13 +52,9 @@ const Articles = () => {
                 <Paragraph>{news.description}</Paragraph>
               </>
             )}
+            <Paragraph>Source: {news.source.name}</Paragraph>
             <Paragraph>
-              Source:
-              {news.source.name}
-            </Paragraph>
-            <Paragraph>
-              Published:
-              {formatDate(news.publishedAt, locales)}
+              Published: {formatDate(news.publishedAt, locales)}
             </Paragraph>
             {popup[news.title] && (
               <Popup
