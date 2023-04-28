@@ -6,14 +6,14 @@ export const PopupWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${({theme}) => theme.colors.popup.wrapperBackground};
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const PopupContent = styled.div`
-  background-color: white;
+  background-color: ${({theme}) => theme.colors.popup.background};
   max-width: 60vw;
   padding: 20px;
   border-radius: 5px;

@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 export const Wrapper = styled.nav`
   width: 180px;
   min-height: 100vh;
-  background-color: #4d4d4d;
+  background-color: ${({theme}) => theme.sideMenu.background};
   margin: 0;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
@@ -16,18 +16,18 @@ export const Wrapper = styled.nav`
 export const Button = styled.button`
   margin: 8px;
   border: 1px solid white;
-  background-color: #4d4d4d;
-  color: white;
+  background-color: ${({theme}) => theme.sideMenu.background};
+  color: ${({theme}) => theme.sideMenu.text};
   cursor: pointer;
   border-radius: 20px;
 
   &:hover {
-    background-color: #666666;
+    background-color: ${({theme}) => theme.sideMenu.hover};
   }
 `;
 
 export const Title = styled.h2`
-  color: white;
+  color: ${({theme}) => theme.sideMenu.text};
   font-size: 18px;
   margin: 10px;
   text-align: center;
@@ -48,17 +48,17 @@ export const StyledNavLink = styled(NavLink)`
   display: grid;
   grid-template-columns: 20px auto;
   grid-gap: 10px;
-  color: white;
+  color: ${({theme}) => theme.sideMenu.text};
   padding: 8px;
   cursor: pointer;
   border-radius: 20px;
 
   &:hover {
-    background-color: #666666;
+    background-color: ${({theme}) => theme.sideMenu.hover};
   }
 
   &.active {
-    border: 1px solid white;
+    border: 1px solid ${({theme}) => theme.sideMenu.active};
   }
 `;
 

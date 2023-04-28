@@ -1,6 +1,6 @@
-import {createGlobalStyle} from "styled-components";
+import {createGlobalStyle, DefaultTheme} from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{theme: DefaultTheme}>`
   html {
     box-sizing: border-box;
   }
@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     margin: 0;
-    background-color: #FEFEFE;
+    background-color:  ${({theme}) => theme.colors.background};
     font-family: 'Lato', sans-serif;
     word-break: break-word;
   }

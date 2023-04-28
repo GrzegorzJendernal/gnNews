@@ -5,7 +5,7 @@ export const Wrapper = styled.footer`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #000000;
+  background-color: ${({theme}) => theme.colors.footerBackground};
   margin: 0;
   height: 50px;
   padding: 15px;

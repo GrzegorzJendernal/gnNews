@@ -34,7 +34,7 @@ export const Box = styled.div<TileBoxProps>`
 `;
 
 export const Article = styled.div<TileBoxProps>`
-  background-color: #cccccc;
+  background-color: ${({theme}) => theme.colors.article.background};
   padding: 8px;
   border-radius: 12px;
 
@@ -43,10 +43,10 @@ export const Article = styled.div<TileBoxProps>`
     css`
       border-bottom: black 1px solid;
       border-radius: unset;
-      background-color: white;
+      background-color: ${({theme}) => theme.colors.article.background};
     `}
   &:hover {
-    background-color: #e6e6e6;
+    background-color: ${({theme}) => theme.colors.article.hover};
   }
 `;
 

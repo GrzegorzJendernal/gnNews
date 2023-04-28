@@ -6,7 +6,7 @@ export const Wrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  background-color: #000000;
+  background-color: ${({theme}) => theme.colors.headerBackground};
   display: flex;
   flex-direction: row;
   align-items: center;

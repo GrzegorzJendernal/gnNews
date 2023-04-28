@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   height: 40px;
-  background-color: #000000;
-  color: white;
+  background-color: ${({theme}) => theme.colors.button.background};
+  color: ${({theme}) => theme.colors.button.text};
   font-size: 14px;
   line-height: 150%;
   font-weight: 700;
   padding: 8px 24px;
-  border: 1px solid #ffffff;
+  border: 1px solid ${({theme}) => theme.colors.button.border};
   border-radius: 24px;
   cursor: pointer;
   text-transform: uppercase;
@@ -28,11 +28,11 @@ export const Button = styled.button`
   }
 
   &:hover {
-    background-color: #4d4d4d;
+    background-color: ${({theme}) => theme.colors.button.hover};
   }
 
   &:active {
-    background-color: #666666;
+    background-color: ${({theme}) => theme.colors.button.active};
   }
 `;
 

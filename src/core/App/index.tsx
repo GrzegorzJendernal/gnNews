@@ -6,7 +6,7 @@ import SideMenu from "../../features/news/SideMenu";
 import Content from "../../features/news/Content";
 import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 import {Provider} from "react-redux";
-import store from "./store";
+import store from "../store";
 import Footer from "../../features/news/Footer";
 import {ThemeProvider} from "styled-components";
 import {theme} from "./theme";

@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {RootState} from "../../core/App/store";
+import {RootState} from "../../core/store";
 
 interface PopupState {
   [key: string]: boolean;
