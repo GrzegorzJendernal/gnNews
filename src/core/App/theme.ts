@@ -23,6 +23,7 @@ export const theme: DefaultTheme = {
   colors: {
     article: {
       background: colorNames.silver,
+      backgroundList: colorNames.white,
       hover: colorNames.mercury,
     },
     background: colorNames.white,

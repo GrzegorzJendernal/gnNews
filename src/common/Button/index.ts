@@ -12,6 +12,7 @@ export const Button = styled.button`
   border-radius: 24px;
   cursor: pointer;
   text-transform: uppercase;
+  ${({theme}) => theme.transition.time};
 
   @media (max-width: ${({theme}) => theme.breakpoints.large}) {
     font-size: 11px;

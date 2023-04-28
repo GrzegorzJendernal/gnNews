@@ -37,13 +37,14 @@ export const Article = styled.div<TileBoxProps>`
   background-color: ${({theme}) => theme.colors.article.background};
   padding: 8px;
   border-radius: 12px;
+  transition: ${({theme}) => theme.transition.time};
 
   ${({listView}) =>
     listView &&
     css`
       border-bottom: black 1px solid;
       border-radius: unset;
-      background-color: ${({theme}) => theme.colors.article.background};
+      background-color: ${({theme}) => theme.colors.article.backgroundList};
     `}
   &:hover {
     background-color: ${({theme}) => theme.colors.article.hover};

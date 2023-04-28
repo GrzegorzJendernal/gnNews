@@ -32,6 +32,7 @@ export const Button = styled.button`
   width: 25px;
   height: 25px;
   padding: 0;
+  ${({theme}) => theme.transition.time};
 `;
 
 export const Title = styled.h3`

@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 export const Wrapper = styled.nav`
   width: 180px;
   min-height: 100vh;
-  background-color: ${({theme}) => theme.sideMenu.background};
+  background-color: ${({theme}) => theme.colors.sideMenu.background};
   margin: 0;
 
   @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
@@ -16,18 +16,19 @@ export const Wrapper = styled.nav`
 export const Button = styled.button`
   margin: 8px;
   border: 1px solid white;
-  background-color: ${({theme}) => theme.sideMenu.background};
-  color: ${({theme}) => theme.sideMenu.text};
+  background-color: ${({theme}) => theme.colors.sideMenu.background};
+  color: ${({theme}) => theme.colors.sideMenu.text};
   cursor: pointer;
   border-radius: 20px;
+  transition: ${({theme}) => theme.transition.time};
 
   &:hover {
-    background-color: ${({theme}) => theme.sideMenu.hover};
+    background-color: ${({theme}) => theme.colors.sideMenu.hover};
   }
 `;
 
 export const Title = styled.h2`
-  color: ${({theme}) => theme.sideMenu.text};
+  color: ${({theme}) => theme.colors.sideMenu.text};
   font-size: 18px;
   margin: 10px;
   text-align: center;
@@ -41,6 +42,7 @@ export const Title = styled.h2`
 export const List = styled.ul`
   margin-top: 0;
   padding: 8px;
+  transition: ${({theme}) => theme.transition.time};
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -48,17 +50,18 @@ export const StyledNavLink = styled(NavLink)`
   display: grid;
   grid-template-columns: 20px auto;
   grid-gap: 10px;
-  color: ${({theme}) => theme.sideMenu.text};
+  color: ${({theme}) => theme.colors.sideMenu.text};
   padding: 8px;
   cursor: pointer;
   border-radius: 20px;
+  transition: ${({theme}) => theme.transition.time};
 
   &:hover {
-    background-color: ${({theme}) => theme.sideMenu.hover};
+    background-color: ${({theme}) => theme.colors.sideMenu.hover};
   }
 
   &.active {
-    border: 1px solid ${({theme}) => theme.sideMenu.active};
+    border: 1px solid ${({theme}) => theme.colors.sideMenu.active};
   }
 `;
 
