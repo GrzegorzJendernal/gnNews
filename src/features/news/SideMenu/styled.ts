@@ -39,17 +39,22 @@ export const Title = styled.h2`
   }
 `;
 
+interface ListProps {
+  isMenuOpen: boolean;
+}
 export const List = styled.ul`
   margin-top: 0;
   padding: 8px;
-  transition: ${({theme}) => theme.transition.time};
+  max-height: ${({isMenuOpen}: ListProps) => (isMenuOpen ? "1300px" : "0")};
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 `;
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   display: grid;
   grid-template-columns: 20px auto;
-  grid-gap: 10px;
+  grid-gap: 12px;
   color: ${({theme}) => theme.colors.sideMenu.text};
   padding: 8px;
   cursor: pointer;
@@ -66,6 +71,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const Item = styled.li`
+  padding-top: 8px;
   list-style: none;
 `;
 
