@@ -11,6 +11,11 @@ export const Wrapper = styled.nav`
     width: unset;
     max-width: 180px;
   }
+
+  @media (max-width: ${({theme}) => theme.breakpoints.small}) {
+    width: unset;
+    max-width: 120px;
+  }
 `;
 
 export const Button = styled.button`
