@@ -50,7 +50,7 @@ interface ListProps {
 export const List = styled.ul`
   margin-top: 0;
   padding: 8px;
-  max-height: ${({isMenuOpen}: ListProps) => (isMenuOpen ? "1300px" : "0")};
+  max-height: ${({isMenuOpen}: ListProps) => (isMenuOpen ? "1500px" : "0")};
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 `;
