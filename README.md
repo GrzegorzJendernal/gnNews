@@ -1,33 +1,34 @@
-# gnNews - gnStudio React.js developer challenge
+# [gnNews](https://grzegorzjendernal.github.io/gnNews/)
 
-Witaj, jeżeli znalazłeś się w tym miejscu to najprawdopodobniej chcesz dołączyć do niesamowitego teamu tworzącego rozwiązania szyte na miarę i chcesz w końcu realizować projekty, które nie będą nudne, będą sprawiały Ci frajdę i będą napawały Cię dumą kiedy tylko o nich pomyślisz.
+A simple application displaying news for a given country, originally created as a recruitment task.
 
-Cóż, projekty są różne, więc może tak właśnie być, a może być zupełnie odwrotnie 😉 Możemy Ci jedynie zagwarantować, że nie będziesz się nudzić.
+In the side menu on the left, select the country whose news you would like to see. In the header, you can change the view to list or tiles.
 
-## O zadaniu
+Each news, after clicking, will display a popup with additional information and the ability to go to the original article.
 
-Abyśmy mogli bliżej poznać Twoje umiejętności techniczne, stopień zaangażowania oraz sposób myślenia, przygotowaliśmy dla Ciebie zadanie polegające na stworzeniu prostej aplikacji będącej "agregatorem newsów" szumnie nazwanej przez nas roboczo **gnNews**.
+## Demo
 
-To na czym nam zależy to przede wszystkim czytelny kod, działająca aplikacja i UI, który nie wygląda jak konar ciosany tępym scyzorykiem (hint: pamiętaj o RWD, ale ciii, nie mów nikomu, że Ci podpowiedziałem 😉)
+[gnNews](https://grzegorzjendernal.github.io/gnNews/)
 
-## Następne kroki
+## Preview
 
-- wykonaj forka tego repozytorium jako prywatne repo
-- postępuj z instrukcjami zawartymi w [opis-zadania.md](./opis-zadania.md)
-- rozwiąż zadanie najlepiej jak potrafisz
-- dodaj użytkownika [gn-studio-pl](https://github.com/gn-studio-pl) do repozytorium
+!["Preview of the page"](https://github.com/GrzegorzJendernal/gnNews/blob/master/src/common/assets/demo.gif?raw=true)
 
-## Uwagi
+## API Source
 
-- aplikację wykonaj w oparciu o React.js, wykorzystanie TypeScript'u bedzie mile widziane i dodatkowo punktowane
-- wykorzystaj nastepujace biblioteki: Redux toolkit, react-test-lib. Może odbierzesz to jako wychodzenie z armatą na muchy ale korzystamy z nich w naszych projektach i chcemy wiedziec czy czujesz się w nich dobrze
-- nie musisz tworzyć całego UI samemu, możesz skorzystać z dowolnej biblioteki UI
-- nie ma tutaj limitu czasu (poza wyznaczonym deadlinem), ale zalecamy, abyś nie spędzał nad tym zadaniem więcej jak 12 godzin
-- staraj się napisać swój kod najlepiej jak potrafisz
-- otestowanie przynajmniej części aplikacji mile widziane 😉
+[![GNEWS](https://gnews.io/assets/images/logo-black.svg?id=a332c72179db3a9d76e6718f0ba0247e)](https://gnews.io/)
 
-## Pytania?
+## Technologies
 
-Jeżeli masz jakiekolwiek pytania co do wykonywanego zadania, bądź coś nie jest dla Ciebie jasne, albo masz trudności na którymś etapie, nie krępuj się - dzwoń, pisz - wyjaśnimy (chyba 😛)
-
-## Powodzenia!
+- React,
+- Tanstack Query,
+- TypeScript,
+- NPM,
+- Redux (Toolkit),
+- GNEWS API (axios),
+- JavaScript: ES6+,
+- Responsive Web Design,
+- Styled Components,
+- CSS Grid,
+- CSS Flexbox,
+- Vite.
