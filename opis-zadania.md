@@ -1,13 +1,5 @@
 # gnNews
 
-Do zrobienia:
-- przesiadka z API,
-- ghPages,
-- visual,
-- transition,
-- env,
-- autoamtyczna translacja,
-
 Aplikacja polegać będzie na wyświetlaniu newsów. Źródłem newsów może być dowolne publiczne API, które daje taką możliwość. Możesz też skorzystać z https://newsapi.org/s/poland-news-api
 
 Ekran aplikacji powinien być podzielony na:
