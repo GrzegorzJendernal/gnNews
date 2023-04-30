@@ -23,8 +23,7 @@ const Buttons = () => {
           author={"Grzegorz Jendernal"}
           content={
             "When creating this project, the difficulty was coming up with the design. I prefer to work on projects" +
-            " developed by professional graphic designers, which is why I focus on raw minimalism. I was also" +
-            " disappointed with the API as it doesn't allow sharing apps on gh sites and I haven't had time to look for a better replacement. I gave up on the tests because I didn't want to imply them without understanding well how they work. I see that I need to expand my knowledge in this field. And when it comes to fun, the whole project gave me a lot of satisfaction, I'm glad that I could try my hand under the pressure of time."
+            " developed by professional graphic designers, which is why I focus on raw minimalism. And when it comes to fun, the whole project gave me a lot of satisfaction, I'm glad that I could try my hand under the pressure of time."
           }
         />
       )}
