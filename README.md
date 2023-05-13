@@ -1,6 +1,6 @@
 # [gnNews](https://grzegorzjendernal.github.io/gnNews/)
 
-A simple application displaying news for a given country, originally created as a recruitment task.
+A simple application displaying news for a chosen country, originally created as a recruitment task.
 
 In the side menu on the left, select the country whose news you would like to see. In the header, you can change the view to list or tiles.
 
